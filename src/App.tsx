@@ -2,13 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
-import WikipediaSearchApi from './pages/WikipediaSearchApi.js'
+import WikipediaSearch from './pages/WikipediaSearch.js'
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<WikipediaSearchApi />} />
+        <Route path="/" element={<WikipediaSearch />} />
       </Routes>
     </div>
   );
