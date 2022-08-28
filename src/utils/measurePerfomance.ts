@@ -1,6 +1,8 @@
-export async function measurePerfomance(fun, monitorLabel) {
+import { ResultSet } from "../global/types";
+
+export async function measurePerfomance(fn : () => Promise<any>) {
     let time1 = performance.now();
-    const resultSet = await fun();
+    const resultSet = await fn();
     let time2 = performance.now();
     return {
       resultSet,
