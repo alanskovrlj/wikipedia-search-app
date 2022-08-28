@@ -30,10 +30,6 @@ function Monitor({resCount,responseTime,requestTitle, setResultLimit} : Props): 
    <h4 className='mb-2 mx-auto'>Searched Term: <span className=''>{requestTitle}</span></h4> 
             </a>
          </li>
-
-
-
-
          <li>
             <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">

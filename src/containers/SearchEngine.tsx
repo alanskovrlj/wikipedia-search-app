@@ -51,7 +51,7 @@ function WikipediaSearch() {
         prevFilesSourcePage = pageName;
         setFiles([])
         const f = await getPageFiles(pageName)
-        setFiles(f)
+        setFiles(f.files)
     }
 
     const onSearchBarEnter =  () => {
