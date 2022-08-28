@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
+import {ResultSet} from '../../global/types'
 
-function SearchModal({onClick, resultSet}) {
+function SearchModal({onClick, resultSet} : {onClick: (a : string) => void,resultSet: ResultSet[]}) {
   return (
     <div className='relative '>
-    <div className='md:w-6/12 border rounded-md rounded-t-sm m-auto absolute inset-x-0 bg-slate-502 -top-16'>
+    <div className='md:w-6/12 border  rounded-md rounded-t-sm m-auto absolute inset-x-0 bg-slate-502 -top-16'>
         <div className=''>
         <ul className='w-full'>
             {resultSet?.slice(0,5).map((item) => {

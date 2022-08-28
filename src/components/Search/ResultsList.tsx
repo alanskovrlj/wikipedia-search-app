@@ -2,14 +2,21 @@ import React, {useState,} from 'react'
 import parse from 'html-react-parser'
 import FileList from '../Modals/FileModal'
 import { getPageFiles } from '../../api/wikipedia'
+import {ResultSet, Files} from '../../global/types'
 
-function SearchResults({resultSet, files, getFiles}) {
+interface Props {
+  resultSet: ResultSet[],
+  files: Files[],
+  getFiles: (a : string) => void
+}
 
-  const [filesModal, setFilesModal] = useState(false)
+function SearchResults({resultSet, files, getFiles} : Props) {
+
+  const [filesModal, setFilesModal] = useState<boolean>(false)
 
   return (
     <div className='grid gap-4 flex-auto md:w-5/12 m-auto'>
-    {filesModal && <FileList setFilesModal={setFilesModal} files={files.files}></FileList>}
+    {filesModal && <FileList setFilesModal={setFilesModal} files={files}></FileList>}
           {resultSet?.map((item)=>{
             return  (
               <div className='p-5 flex'><div className=''>
